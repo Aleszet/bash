@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# 22.04.2018 Alex L_y_s_k_o_v_e_c
+
+COMD="linux_command.txt"
+RESUL="linux_command_out.txt"
+
+IFS=$'\n'
+source $COMD | tee -a $RESUL 
+sha1sum $RESUL > hash.sha1
+
+$COMD 2> errors.txt
+
+#for var in $(cat $file)
+#do
+#echo " $var"
+#done
+
+##for x in COMD
+#do
+#     $x | tee -a RESUL 
+#done
+#
+tar -czf "../${PWD##*/}.tar.gz" .
