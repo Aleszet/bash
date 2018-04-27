@@ -11,6 +11,10 @@ sha1sum $RESUL > hash.sha1
 
 $COMD 2> errors.txt
 
+tar -czf "../${PWD##*/}.tar.gz" .
+
+
+#for next version
 #for var in $(cat $file)
 #do
 #echo " $var"
@@ -21,4 +25,4 @@ $COMD 2> errors.txt
 #     $x | tee -a RESUL 
 #done
 #
-tar -czf "../${PWD##*/}.tar.gz" .
+
